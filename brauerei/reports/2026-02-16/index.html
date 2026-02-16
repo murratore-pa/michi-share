@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brauerei Innovation Report – 16. Februar 2026</title>
+    <style>
+        :root {
+            --primary: #d4a574;
+            --secondary: #2c1810;
+            --accent: #f4e4c1;
+            --text: #333;
+            --light: #f9f6f1;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: linear-gradient(135deg, #f9f6f1 0%, #e8dcc8 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--secondary) 0%, #4a3428 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "🍺";
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.05;
+            right: -2rem;
+            top: -2rem;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+        }
+        
+        header .date {
+            color: var(--primary);
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .summary {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .summary h2 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .summary ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .summary li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .innovation {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .innovation:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .innovation h3 {
+            color: var(--secondary);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .innovation .number {
+            background: var(--primary);
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .innovation p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        
+        .relevance {
+            background: var(--light);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 3px solid var(--primary);
+        }
+        
+        .relevance strong {
+            color: var(--secondary);
+        }
+        
+        .source {
+            margin-top: 1rem;
+        }
+        
+        .source a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .source a:hover {
+            text-decoration: underline;
+        }
+        
+        .conclusion {
+            background: linear-gradient(135deg, var(--secondary) 0%, #4a3428 100%);
+            color: white;
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin: 2rem 0;
+        }
+        
+        .conclusion h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+        
+        .conclusion h3 {
+            color: var(--accent);
+            margin: 1.5rem 0 1rem 0;
+            font-size: 1.2rem;
+        }
+        
+        .conclusion ol {
+            margin-left: 1.5rem;
+        }
+        
+        .conclusion li {
+            margin-bottom: 0.8rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .tag {
+            background: var(--accent);
+            color: var(--secondary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🍺 Brauerei Innovation Report</h1>
+        <p class="date">16. Februar 2026</p>
+    </header>
+    
+    <div class="container">
+        <div class="summary">
+            <h2>Zusammenfassung</h2>
+            <p>Die Brauereibranche steht 2026 an einem Wendepunkt. Während der Gesamtmarkt leicht rückläufig ist, boomen die Innovationsfelder:</p>
+            <ul>
+                <li><strong>Alkoholfreie Biere</strong> mit biotechnologischen Durchbrüchen ("Smart Yeast")</li>
+                <li><strong>KI-gestützte Produktion</strong> und digitale Zwillinge</li>
+                <li><strong>Zirkuläre Verpackungssysteme</strong> aus Agrar-Abfällen</li>
+                <li><strong>Hyper-personalisierte</strong> Functional Drinks ("Body OS")</li>
+            </ul>
+            <div class="tags">
+                <span class="tag">Produkt-Innovationen</span>
+                <span class="tag">Digitale Lösungen</span>
+                <span class="tag">Technologie</span>
+                <span class="tag">Nachhaltigkeit</span>
+                <span class="tag">Trends</span>
+            </div>
+        </div>
+
+        <div class="innovation">
+            <h3><span class="number">1</span> AB InBev revolutioniert alkoholfreies Bier mit "Smart Yeast"</h3>
+            <p>Der weltgrösste Braukonzern hat eine neue Hefestamm entwickelt, die natürlich nur minimalen Alkohol produziert. Das Resultat: Negra Modelo NA mit nur 0.4% Alkohol, das authentisch nach Bier schmeckt – ohne den üblichen geschmacklichen Kompromiss. Die "Smart Yeast" befindet sich derzeit in der Beta-Phase in Mexiko.</p>
+            <div class="relevance">
+                <strong>Relevant:</strong> Biotechnologischer Durchbruch für den boomenden NA-Markt. Könnte die Benchmark für alkoholfreie Premium-Biere setzen.
+            </div>
+            <div class="source">
+                🔗 <a href="https://www.nationalgeographic.com/science/article/non-alcoholic-beer-na-yeast-brew" target="_blank">National Geographic</a>
+            </div>
+        </div>
+
+        <div class="innovation">
+            <h3><span class="number">2</span> Zirkuläre Verpackungssysteme werden zum Industriestandard</h3>
+            <p>2026 markiert den Durchbruch kreislauforientierter Verpackungen: Mehrwegflaschen, vollständig recycelbare Materialien aus Papierzellstoff, Biokunststoffe und Zuckerrohrfasern. Loop by TerraCycle und ähnliche Rücknahmesysteme gewinnen massiv an Bedeutung. Die Abkehr vom Einweg-Modell ist keine Nischenbewegung mehr, sondern strategische Priorität.</p>
+            <div class="relevance">
+                <strong>Relevant:</strong> Gesetzliche Rahmenbedingungen in Europa und Nordamerika machen Extended Producer Responsibility zur Pflicht. Wer jetzt nicht umstellt, riskiert Strafen und Reputationsverlust.
+            </div>
+            <div class="source">
+                🔗 <a href="https://www.beveragedaily.com/Article/2026/02/13/beverage-packaging-circular-models/" target="_blank">Beverage Daily</a>
+            </div>
+        </div>
+
+        <div class="innovation">
+            <h3><span class="number">3</span> Smart Packaging: Vom Container zur digitalen Schnittstelle</h3>
+            <p>Getränkeverpackungen werden zu "connected" Produkten: RFID-Tags, spezialisierte QR-Codes und Blockchain-Integration ermöglichen Echtzeit-Track&Trace. Im Rückruffall können gezielt betroffene Einheiten identifiziert werden – statt ganzer Chargen. Zusätzlich bieten sie Anti-Fälschungs-Schutz und immersive Markenerlebnisse.</p>
+            <div class="relevance">
+                <strong>Relevant:</strong> 70% der Hersteller sollen 2026 digitale Zwillinge und KI-basierte Prognosetools einsetzen.
+            </div>
+            <div class="source">
+                🔗 <a href="https://www.packagingworldinsights.com/trends/smart-packaging-technologies-for-beverage-brands/" target="_blank">Packaging World Insights</a>
+            </div>
+        </div>
+
+        <div class="innovation">
+            <h3><span class="number">4</span> "Easy-Drinking" Biere erobern den nordamerikanischen Markt</h3>
+            <p>Clean Finishes und sessionable Formate fördern Trial und Wiederholungskäufe. Lager bleiben die beliebteste Kategorie, aber Craft-Biere mit tropischen Aromen (Ananas, Litschi, Vanille) wie Untitled Arts Tropical Craft Beer gewinnen an Boden. Internationale Geschmacksrichtungen und technikgetriebene Brauverfahren stehen im Fokus.</p>
+            <div class="relevance">
+                <strong>Relevant:</strong> Durchbruch für europäische Exportbiere in den USA/Canada. Schweizer Brauereien könnten mit alpinen Botanical-Varianten punkten.
+            </div>
+            <div class="source">
+                🔗 <a href="https://www.innovamarketinsights.com/trends/beer-trends-2026-us-canada-market-overview/" target="_blank">Innova Market Insights</a>
+            </div>
+        </div>
+
+        <div class="innovation">
+            <h3><span class="number">5</span> "Body OS" – Personalisierte Funktionalität im Getränkesektor</h3>
+            <p>2026 ist das Jahr des Faserns statt nur Protein. Getrieben durch GLP-1-Medikamente und verstärktes Verständnis für Darmgesundheit suchen Verbraucher nach "Body Upgrades". High-Fiber-Cocktail-Mixer, probiotische Pastas und adaptogene Getränke boomen. Der Fokus verschiebt sich von "was vermeiden" zu "was hinzufügen".</p>
+            <div class="relevance">
+                <strong>Relevant:</strong> Funktionalisierung von Bier und alkoholfreien Alternativen (z.B. mit Prebiotika) könnte neue Zielgruppen erschliessen.
+            </div>
+            <div class="source">
+                🔗 <a href="https://www.graphicpkg.com/resources/drink-different-the-bold-beverage-trends-taking-over-2026/" target="_blank">Graphic Packaging</a>
+            </div>
+        </div>
+
+        <div class="innovation">
+            <h3><span class="number">6</span> US Bierverpackungsmarkt: Wachstum auf 9.06 Mrd. USD bis 2035</h3>
+            <p>Der Markt wächst mit 3.7% CAGR von 6.53 Mrd. (2026) auf 9.06 Mrd. USD (2035). Craft-Brauereien treiben die Nachfrage durch innovative Verpackungen zur Markenprofilierung. Dosen wachsen schneller als Flaschen, Metal überholt Glas als Material. Premium- und nachhaltige Verpackungen sind entscheidende Wachstumstreiber.</p>
+            <div class="relevance">
+                <strong>Relevant:</strong> Investitionen in Dosenlinien und nachhaltige Materialien amortisieren sich.
+            </div>
+            <div class="source">
+                🔗 <a href="https://www.towardspackaging.com/insights/u-s-beer-packaging-market-sizing" target="_blank">Towards Packaging</a>
+            </div>
+        </div>
+
+        <div class="innovation">
+            <h3><span class="number">7</span> KI revolutioniert die Lebensmittel- und Getränkeproduktion</h3>
+            <p>Gartner prognostiziert: 70% der Hersteller setzen 2026 digitale Zwillinge ein, über 50% aller Supply-Chain-Entscheidungen werden durch KI und Echtzeitdaten unterstützt. Nestlé nutzt KI-gestützte visuelle Inspektion, Coca-Cola arbeitet mit AgNext für Qualitätskontrollen. Von Kontaminationserkennung bis Haltbarkeitsprognose – KI wird zum Standard.</p>
+            <div class="relevance">
+                <strong>Relevant:</strong> Auch mittlere Schweizer Brauereien können durch cloudbasierte ERP-Systeme von diesen Technologien profitieren.
+            </div>
+            <div class="source">
+                🔗 <a href="https://stoneridgesoftware.com/top-tech-innovations-for-food-and-beverage-manufacturers-in-2026/" target="_blank">Stoneridge Software</a>
+            </div>
+        </div>
+
+        <div class="innovation">
+            <h3><span class="number">8</span> Mini-Cocktails und Flight-Formate im On-Premise-Sektor</h3>
+            <p>"Tiny Serves", Mini-Martinis, halbe Portionen und kuratierte Flights werden vom Nischenphänomen zum Menü-Standard. Gäste wollen mehr probieren ohne sich auf ABV oder Preis festzulegen. Für Betreiber bedeutet das: Premium-Zutaten zu erschwinglichen Preisen und mehr Vielfalt pro Anlass.</p>
+            <div class="relevance">
+                <strong>Relevant:</strong> Ansatz für Schweizer Brauereien mit eigenen Taprooms: Bier-Flights als Erlebnisformat etablieren.
+            </div>
+            <div class="source">
+                🔗 <a href="https://nielseniq.com/global/en/insights/analysis/2026/beval-trends-to-track-the-us-on-premise-in-2026/" target="_blank">NielsenIQ</a>
+            </div>
+        </div>
+
+        <div class="innovation">
+            <h3><span class="number">9</span> Nachhaltige Verpackungen aus Agrar-Abfällen</h3>
+            <p>Innovationen im Verpackungssektor nutzen zunehmend landwirtschaftliche Nebenprodukte: Zuckerrohr, Maisstärke, sogar Algen zur Herstellung funktionaler Behälter. Bottle-to-Bottle Recycling-Loops und chemisches Recycling gewinnen an Bedeutung.</p>
+            <div class="relevance">
+                <strong>Relevant:</strong> Mögliche Partnerschaften mit Schweizer Agrarbetrieben für lokale, nachhaltige Verpackungslösungen.
+            </div>
+            <div class="source">
+                🔗 <a href="https://www.packagingworldinsights.com/trends/sustainable-beverage-packaging-innovation-trends/" target="_blank">Packaging World Insights</a>
+            </div>
+        </div>
+
+        <div class="innovation">
+            <h3><span class="number">10</span> Visual Quality als neuer Standard – "Instagrammability"</h3>
+            <p>Sauberes Glas, Premium-Eis, Farbverläufe und präzise Garnierungen sind keine Gimmicks mehr, sondern Hygienefaktoren. Besonders jüngere Verbraucher belohnen ästhetisch ansprechende Präsentationen, da sie Qualität und Aufmerksamkeit signalisieren.</p>
+            <div class="relevance">
+                <strong>Relevant:</strong> Verpackungsdesign und Glaswaren für Marketing und Social Media optimieren.
+            </div>
+            <div class="source">
+                🔗 <a href="https://nielseniq.com/global/en/insights/analysis/2026/beval-trends-to-track-the-us-on-premise-in-2026/" target="_blank">NielsenIQ</a>
+            </div>
+        </div>
+
+        <div class="innovation">
+            <h3><span class="number">11</span> ESG-Ziele trotz politischer Gegenwinde</h3>
+            <p>Trotz veränderter politischer Rahmenbedingungen und verschobener Deadlines bei Diageo und PepsiCo bleibt Nachhaltigkeit strategischer Fokus. Die Eco Drinks Conference in London betonte: Dekarbonisierung und zirkuläre Verpackungen sind existenzielle Notwendigkeiten.</p>
+            <div class="relevance">
+                <strong>Relevant:</strong> Langfristige Planung auf Nachhaltigkeit setzen, unabhängig von kurzfristigen politischen Schwankungen.
+            </div>
+            <div class="source">
+                🔗 <a href="https://www.just-drinks.com/features/obstacles-and-opportunities-facing-drinks-industry-in-sustainability-shift/" target="_blank">Just Drinks</a>
+            </div>
+        </div>
+
+        <div class="innovation">
+            <h3><span class="number">12</span> Alkoholfreie Biere mit "Outsized Growth" im On-Premise</h3>
+            <p>Während der Craft-Bier-Sektor eine Konsolidierungsphase durchläuft (mehr Schliessungen als Eröffnungen), verzeichnet alkoholfreies Bier überproportionales Wachstum. Die "Sober Curious"-Bewegung treibt Nachfrage nach geschmackvollen Alternativen.</p>
+            <div class="relevance">
+                <strong>Relevant:</strong> Investitionen in NA-Portfolios könnten höhere Renditen bringen als traditionelle Sortimentserweiterungen.
+            </div>
+            <div class="source">
+                🔗 <a href="https://nielseniq.com/global/en/insights/analysis/2026/beval-trends-to-track-the-us-on-premise-in-2026/" target="_blank">NielsenIQ</a>
+            </div>
+        </div>
+
+        <div class="conclusion">
+            <h2>📊 Fazit</h2>
+            <p>Die Brauereibranche steht 2026 an einem Wendepunkt. Während der Gesamtmarkt leicht rückläufig ist, boomen die Innovationsfelder: Alkoholfreie Biere mit biotechnologischen Durchbrüchen, KI-gestützte Produktion, zirkuläre Verpackungssysteme und hyper-personalisierte Functional Drinks.</p>
+            
+            <h3>Empfehlungen für Schweizer Brauereien:</h3>
+            <ol>
+                <li><strong>NA-Innovationen:</strong> "Smart"-Technologien wie spezielle Hefestämme evaluieren</li>
+                <li><strong>Lokale Nachhaltigkeit:</strong> Partnerschaften mit Schweizer Landwirten für Verpackungen aus Agrar-Abfällen</li>
+                <li><strong>Digitale Erlebnisse:</strong> Smart Packaging mit QR-Code-Storytelling und Kundenbindung</li>
+                <li><strong>Exportchancen:</strong> "Easy-drinking" Botanical-Varianten für den nordamerikanischen Markt</li>
+            </ol>
+            
+            <p>Die Verbindung aus Tradition (Craft-Techniken) und Innovation (KI, Biotech) wird der entscheidende Erfolgsfaktor.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Report generiert: 16. Februar 2026 | Quellen: 12 internationale Fachpublikationen</p>
+        <p>🍺 Brauerei Innovation Report – Powered by Alfred</p>
+    </footer>
+</body>
+</html>
