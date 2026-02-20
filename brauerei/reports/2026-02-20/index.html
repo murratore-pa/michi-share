@@ -5,116 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brauerei Innovation Report – 20.02.2026</title>
     <style>
-        :root { --primary: #d4a574; --secondary: #2c1810; --accent: #f4e4c1; --text: #333; --light: #f9f6f1; }
+        :root { --primary: #d4a574; --secondary: #2c1810; --text: #333; --light: #f9f6f1; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: var(--text); background: linear-gradient(135deg, #f9f6f1 0%, #e8dcc8 100%); min-height: 100vh; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: var(--text); background: linear-gradient(135deg, #f9f6f1 0%, #e8dcc8 100%); }
         header { background: linear-gradient(135deg, var(--secondary) 0%, #4a3428 100%); color: white; padding: 4rem 2rem; text-align: center; }
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; font-weight: 300; }
-        header p { color: var(--primary); font-size: 1.2rem; }
-        .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
-        .summary { background: white; border-radius: 16px; padding: 2rem; margin: 2rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-left: 4px solid var(--primary); }
-        .innovation { background: white; border-radius: 16px; padding: 2rem; margin: 1.5rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-        .innovation h3 { color: var(--secondary); font-size: 1.3rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
-        .innovation .tag { display: inline-block; background: var(--primary); color: white; padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.75rem; margin-right: 0.5rem; }
-        .innovation .tag.product { background: #8b4513; }
-        .innovation .tag.digital { background: #2c5aa0; }
-        .innovation .tag.tech { background: #228b22; }
-        .innovation .tag.trend { background: #ff6b35; }
-        .innovation .tag.market { background: #6b2c91; }
-        .relevance { background: var(--light); border-radius: 8px; padding: 1rem; margin: 1rem 0; border-left: 3px solid var(--primary); }
-        .relevance strong { color: var(--secondary); }
-        .source { margin-top: 1rem; font-size: 0.9rem; }
+        header h1 { font-size: 2.4rem; margin-bottom: 0.6rem; font-weight: 300; }
+        header p { color: var(--primary); font-size: 1.1rem; }
+        .container { max-width: 920px; margin: 0 auto; padding: 2rem; }
+        .summary, .innovation, .conclusion { background: white; border-radius: 16px; padding: 2rem; margin: 1.5rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .summary { border-left: 4px solid var(--primary); }
+        .innovation h3 { color: var(--secondary); font-size: 1.25rem; margin-bottom: 0.8rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+        .tag { display: inline-block; color: white; padding: 0.2rem 0.75rem; border-radius: 12px; font-size: 0.75rem; }
+        .market { background: #6b2c91; }
+        .product { background: #8b4513; }
+        .digital { background: #2c5aa0; }
+        .trend { background: #ff6b35; }
+        .sustainability { background: #228b22; }
+        .relevance { background: var(--light); border-left: 3px solid var(--primary); border-radius: 8px; padding: 1rem; margin-top: 1rem; }
+        .source { margin-top: 1rem; font-size: 0.92rem; }
         .source a { color: var(--primary); text-decoration: none; }
         .source a:hover { text-decoration: underline; }
-        .conclusion { background: linear-gradient(135deg, var(--secondary) 0%, #4a3428 100%); color: white; border-radius: 16px; padding: 2.5rem; margin: 2rem 0; }
-        .conclusion h2 { margin-bottom: 1rem; }
-        .conclusion ul { margin-left: 1.5rem; }
-        .conclusion li { margin: 0.5rem 0; }
-        footer { text-align: center; padding: 2rem; color: #666; font-size: 0.9rem; }
+        .conclusion { background: linear-gradient(135deg, var(--secondary) 0%, #4a3428 100%); color: white; }
+        .conclusion h2 { margin-bottom: 0.9rem; }
+        .conclusion ul { margin-left: 1.25rem; }
+        .conclusion li { margin: 0.45rem 0; }
+        footer { text-align: center; color: #666; padding: 2rem; font-size: 0.9rem; }
     </style>
 </head>
 <body>
     <header>
         <h1>🍺 Brauerei Innovation Report</h1>
-        <p>20. Februar 2026</p>
+        <p>20. Februar 2026 · Fokus CH/EU + globale Impulse</p>
     </header>
-    
+
     <div class="container">
-        <div class="summary">
-            <h2>📋 Zusammenfassung</h2>
-            <p>Die Brauereibranche steht an einem Wendepunkt: Während BrewDog, einstiges Aushängeschild der Craft-Beer-Bewegung, zum Verkauf steht, gewinnen Clean-Label-Trends und funktionale Getränke massiv an Bedeutung. Die Fragmentierung beschleunigt sich – von Yerba Mate als neuem Energy-Drink-Konkurrenten bis hin zu transparenten Alkoholprodukten ohne Zusatzstoffe. Schweizer Brauereien haben die Chance, als Early Mover bei Clean Label und nachhaltiger Produktion zu punkten.</p>
-        </div>
+        <section class="summary">
+            <h2>📋 Kurzfazit</h2>
+            <p>In den letzten 7 Tagen zeigt sich ein klares Muster: Große Brauereien und Getränkehäuser kombinieren harte Effizienzmaßnahmen mit gezielter Marken- und Produktinnovation. Besonders relevant sind aktuell drei Felder: <strong>Portfolio-Verschiebung (No/Low, Beyond Beer)</strong>, <strong>Operational Excellence (Logistik/Energie)</strong> und <strong>Clean-/Functional-Positionierung</strong>.</p>
+        </section>
 
-        <div class="innovation">
-            <h3><span class="tag market">Markt</span> BrewDog-Desaster: Ende eines Craft-Beer-Urgesteins?</h3>
-            <p>BrewDog, einst die "rebellische" Stimme der Craft-Beer-Bewegung, wurde zum Verkauf gestellt. Nach einem Umsatzwachstum von nur noch 1% (2024) und einem Verlust von £37 Millionen hat das Unternehmen AlixPartners beauftragt, einen strukturierten Verkaufsprozess zu begleiten. Die Publikumsgunst ist dahin – ehemalige Mitarbeiter kritisierten die Unternehmenskultur, CEO James Watt trat 2024 zurück, und das als Nachhaltigkeits-Projekt gepriesene Rewilding-Waldstück wurde bereits verkauft.</p>
-            <div class="relevance">
-                <strong>👉 Relevant:</strong> Das Craft-Beer-Segment reift – oder korrigiert. Konsumenten wandern zu Canned Cocktails oder alkoholfreien Alternativen ab. Innovation allein reicht nicht, nachhaltige Profitabilität zählt. Ein Warnsignal für das gesamte Segment.
-            </div>
-            <div class="source">
-                🔗 <a href="https://www.beveragedaily.com/Article/2026/02/16/brewdog-put-up-for-sale/" target="_blank">BeverageDaily – BrewDog put up for sale</a>
-            </div>
-        </div>
+        <section class="innovation">
+            <h3><span class="tag market">Marktstruktur</span> BrewDog startet strukturierten Verkaufsprozess</h3>
+            <p>BrewDog hat laut BeverageDaily AlixPartners mandatiert, um strategische Optionen inklusive Verkauf zu prüfen. Hintergrund sind schwaches Wachstum (+1% in 2024) und ein Verlust von £37 Mio. Die Entwicklung gilt als Signal für die Reifephase im Craft-Segment.</p>
+            <div class="relevance"><strong>Relevanz für Brauereien:</strong> Skalierung ohne robuste Profitabilität wird schwieriger. Fokus auf margentragende Kern-SKUs und klare Kapitaldisziplin wird wichtiger als reines Wachstum.</div>
+            <div class="source">🔗 Quelle: <a href="https://www.beveragedaily.com/Article/2026/02/16/brewdog-put-up-for-sale/" target="_blank">BeverageDaily (16.02.2026)</a></div>
+        </section>
 
-        <div class="innovation">
-            <h3><span class="tag trend">Trend</span> Clean Alcohol: Die nächste Clean-Label-Welle erreicht Alkohol</h3>
-            <p>Das "Clean Alcohol Collective" hat sich formiert, um Transparenz in der Alkoholindustrie zu etablieren. Eine "No List" definiert problematische Zusatzstoffe: HFCS, Aspartam, Glycerin, künstliche Farbstoffe und Konservierungsstoffe wie Natriumbenzoat. Besonders Tequila führt voran – Marken wie Tequila Ocho, G4 und Siete Legas positionieren sich als "additive-free". Im Gegensatz zu Lebensmitteln und Softdrinks müssen Alkoholhersteller in den USA nicht einmal Inhaltsstoffe deklarieren.</p>
-            <div class="relevance">
-                <strong>👉 Relevant:</strong> Clean Label = Vertrauensbonus. Schweizer Brauereien können hier Early Mover sein – besonders für RTDs und alkoholfreie Varianten, die oft mit "versteckten" Zutaten arbeiten. Ein Wettbewerbsvorteil, der noch kaum genutzt wird.
-            </div>
-            <div class="source">
-                🔗 <a href="https://www.beveragedaily.com/Article/2026/02/10/clean-alcohol-clean-label-reaches-beer-tequila-canned-cocktails/" target="_blank">BeverageDaily – The rise of clean alcohol</a>
-            </div>
-        </div>
+        <section class="innovation">
+            <h3><span class="tag market">Portfolio</span> AB InBev verstärkt Megabrand- und No/Low-Strategie</h3>
+            <p>AB InBev investierte laut BeverageDaily 2025 rund USD 7,4 Mrd. in Sales & Marketing der Top-Marken. Parallel stiegen alkoholfreie Bierumsätze deutlich (u.a. Corona Cero), während klassische Volumen unter Druck bleiben.</p>
+            <div class="relevance"><strong>Relevanz für Brauereien:</strong> Doppelstrategie funktioniert: starke Kernmarken plus wachstumsstarke No/Low- und Beyond-Beer-Bausteine. Für CH/EU-Brauer ist das ein belastbarer Blueprint für 2026.</div>
+            <div class="source">🔗 Quelle: <a href="https://www.beveragedaily.com/Article/2026/02/13/ab-inbev-invests-in-budweiser-corona-stella-artois-for-long-term-growth/" target="_blank">BeverageDaily (13.02.2026)</a></div>
+        </section>
 
-        <div class="innovation">
-            <h3><span class="tag product">Produkt</span> Yerba Mate: Der nächste Energy-Drink-Killer?</h3>
-            <p>Der globale Yerba-Mate-Markt wächst von $2,03 Mrd (2025) auf prognostizierte $3,46 Mrd (2035) – eine jährliche Wachstumsrate von 5,48%. RTD-Formate (Ready-to-Drink) boomen mit +65% YoY. PepsiCo ist mit der Marke Yachak bereits aktiv im Markt. Europa wächst um 35%, Deutschland und Frankreich führen die europäische Nachfrage an. Besonders gesund: Der Asia-Pacific-Raum mit 50% Importwachstum.</p>
-            <div class="relevance">
-                <strong>👉 Relevant:</strong> Yerba Mate vereint "natürliches Koffein" + "gesund" + "südamerikanisches Lifestyle". Perfekt für Schweizer Brauereien mit Innovations-Mentality – entweder als Zutat in Mischgetränken oder als eigene Produktlinie. Der Markt ist noch lange nicht gesättigt.
-            </div>
-            <div class="source">
-                🔗 <a href="https://www.beveragedaily.com/Article/2026/02/19/global-yerba-mate-demand-surges-in-20252035/" target="_blank">BeverageDaily – Global yerba mate demand surges</a>
-            </div>
-        </div>
+        <section class="innovation">
+            <h3><span class="tag trend">Consumer Trend</span> Functional Drinks wachsen, aber Preisbarriere bleibt hoch</h3>
+            <p>Eine aktuelle UK-Erhebung (Vypr, via BeverageDaily) zeigt: 61% haben Functional Drinks noch nie probiert; 32% empfinden sie als zu teuer. Gleichzeitig bleiben Sleep- und Gut-Health-Benefits stark nachgefragt.</p>
+            <div class="relevance"><strong>Relevanz für Brauereien:</strong> Für alkoholfreie Innovationslinien gilt: Nutzenversprechen klar, Inhaltsstoffe verständlich, Preisarchitektur massenmarktfähig. Bildung + Geschmack + Preis müssen zusammenpassen.</div>
+            <div class="source">🔗 Quelle: <a href="https://www.beveragedaily.com/Article/2026/02/17/functional-beverages-how-big-is-mainstream-potential/" target="_blank">BeverageDaily (17.02.2026)</a></div>
+        </section>
 
-        <div class="innovation">
-            <h3><span class="tag trend">Trend</span> Functional Beverages: Wachstumsmotor mit Preis-Hürde</h3>
-            <p>Functional Drinks sind der Wachstumstreiber in der Softdrink-Kategorie und stehlen Marktanteile von klassischen Getränken. Aber: 32% der UK-Konsumenten finden sie zu teuer, nur 18% sind bereit, mehr als £2 pro Dose zu zahlen. Sleep (42%) und Gut Health (37%) sind die gefragtesten Benefits. Doch nur 30% kennen Ashwagandha, 18% L-theanine – Vertrautheit schafft Vertrauen, neue Inhaltsstoffe müssen erst erklärt werden.</p>
-            <div class="relevance">
-                <strong>👉 Relevant:</strong> Für Brauereien mit alkoholfreien Linien: Sleep, Gut Health und Hydration sind gefragt. Aber der Preis muss stimmen. "Echtes" Ergebnis + guter Geschmack rechtfertigen Premium. Bekannte Marken wie Trip (33% Awareness) haben Vorteile gegenüber Nischen-Produkten.
-            </div>
-            <div class="source">
-                🔗 <a href="https://www.beveragedaily.com/Article/2026/02/17/functional-beverages-how-big-is-mainstream-potential/" target="_blank">BeverageDaily – Functional drinks mass market appeal</a>
-            </div>
-        </div>
+        <section class="innovation">
+            <h3><span class="tag product">Kategorie-Shift</span> Yerba Mate etabliert sich als natürlicher Energy-Case</h3>
+            <p>BeverageDaily berichtet über starkes globales Wachstum bei Yerba Mate (inkl. RTD-Dynamik). Multinationale Player positionieren Yerba als "Natural Energy" zwischen Energy Drink, Tea und Functional Beverage.</p>
+            <div class="relevance"><strong>Relevanz für Brauereien:</strong> Brauereien mit Fermentations- und RTD-Know-how können schnell in angrenzende Segmente expandieren (z.B. caffeine-led, low-sugar, alcohol-free Hybridformate).</div>
+            <div class="source">🔗 Quelle: <a href="https://www.beveragedaily.com/Article/2026/02/19/global-yerba-mate-demand-surges-in-20252035/" target="_blank">BeverageDaily (19.02.2026)</a></div>
+        </section>
 
-        <div class="innovation">
-            <h3><span class="tag tech">Nachhaltigkeit</span> Warsteiner baut Windrad für 50% des Strombedarfs</h3>
-            <p>Die deutsche Familienbrauerei Warsteiner investiert in ein Windrad, das die Hälfte des eigenen Strombedarfs decken wird. Das Projekt ist Teil einer umfassenden Nachhaltigkeitsstrategie, die über Marketing hinausgeht und echte Operational Excellence bedeutet. Parallel: Coca-Cola HBC Österreich automatisierte den Lkw-Verkehr am Standort Edelstal – 45% kürzere Durchlaufzeiten, 85% Termintreue.</p>
-            <div class="relevance">
-                <strong>👉 Relevant:</strong> Nachhaltigkeit ist keine Marketing-Flanke mehr, sondern Operations-Excellence, die Geld spart und Storys schafft. Schweizer Brauereien könnten ähnliche Effizienzprojekte angehen – von erneuerbaren Energien bis zu smarter Logistik.
-            </div>
-            <div class="source">
-                🔗 <a href="https://www.lebensmittelpraxis.de/industrie-aktuell/47479-brauerei-investiert-warsteiner-baut-windrad-fuer-die-haelfte-des-strombedarfs.html" target="_blank">Lebensmittel Praxis – Warsteiner Windrad</a>
-            </div>
-        </div>
+        <section class="innovation">
+            <h3><span class="tag digital">Operations</span> Coca-Cola HBC Österreich automatisiert Yard-Management</h3>
+            <p>Am Standort Edelstal wird der Lkw-Verkehr weitgehend softwaregesteuert abgewickelt. Berichtet werden 45% geringere Durchlaufzeiten und 85% Termintreue.</p>
+            <div class="relevance"><strong>Relevanz für Brauereien:</strong> Auch für Brauereien ist die größte schnelle Rendite oft nicht im Sudhaus, sondern in Logistikprozessen. Digitale Slot-/Yard-Steuerung kann Servicelevel und Kosten gleichzeitig verbessern.</div>
+            <div class="source">🔗 Quellen: <a href="https://lebensmittelpraxis.de/lp-international/189-lpinternational-nachrichten/47734-oesterreich-coca-cola-hbc-verkuerzt-durchlaufzeit-der-lkw.html" target="_blank">Lebensmittel Praxis (19.02.2026)</a> · <a href="https://oevz.com/coca-cola-hbc-oesterreich-automatisiert-lkw-abfertigung/" target="_blank">ÖVZ</a></div>
+        </section>
 
-        <div class="conclusion">
-            <h2>🎯 Fazit für Innovation-Manager</h2>
-            <p>Die Branche fragmentiert weiter:</p>
+        <section class="innovation">
+            <h3><span class="tag sustainability">Energie</span> Warsteiner investiert in Windkraft am Brauereistandort</h3>
+            <p>Warsteiner plant bis 2027 eine eigene Windkraftanlage, die mindestens 50% des Strombedarfs am Standort decken soll. Ziel ist höhere Unabhängigkeit von volatilen Energiemärkten.</p>
+            <div class="relevance"><strong>Relevanz für Brauereien:</strong> Energieinnovationen sind inzwischen Kern der Wettbewerbsfähigkeit: stabilere Kostenbasis, belastbare Nachhaltigkeitsstory und höhere Resilienz im Einkauf.</div>
+            <div class="source">🔗 Quelle: <a href="https://www.lebensmittelpraxis.de/industrie-aktuell/47479-brauerei-investiert-warsteiner-baut-windrad-fuer-die-haelfte-des-strombedarfs.html" target="_blank">Lebensmittel Praxis (30.01.2026)</a></div>
+        </section>
+
+        <section class="conclusion">
+            <h2>🎯 Prioritäten für die nächsten 90 Tage</h2>
             <ul>
-                <li><strong>Craft Beer</strong> muss reifen – BrewDog zeigt, dass Hype allein nicht reicht</li>
-                <li><strong>Clean Label</strong> erobert Alkohol – frühe Adopter haben Vorteile</li>
-                <li><strong>Functional Drinks</strong> + <strong>Yerba Mate</strong> wachsen zweistellig</li>
-                <li><strong>Nachhaltige Produktion</strong> senkt Kosten und schafft Marke</li>
+                <li><strong>Portfolio balancieren:</strong> Kernbier stärken, No/Low und Beyond-Beer gezielt ausbauen.</li>
+                <li><strong>Operations digitalisieren:</strong> Yard, Planung und Abwicklung als schnelle Effizienzhebel nutzen.</li>
+                <li><strong>Kostenresilienz erhöhen:</strong> Energieprojekte mit messbarem ROI priorisieren.</li>
+                <li><strong>Consumer Fit schärfen:</strong> Functional/Clean nur mit klarer Nutzenkommunikation und realistischer Preispositionierung.</li>
             </ul>
-            <p style="margin-top: 1rem;">Wer jetzt in Transparenz, nachhaltige Produktion und neue Kategorie-Formate investiert, ist vorn.</p>
-        </div>
+        </section>
     </div>
-    
+
     <footer>
-        <p>🍺 Brauerei Innovation Report | Automatisch generiert</p>
+        <p>🍺 Brauerei Innovation Report · Stand: 20.02.2026</p>
     </footer>
 </body>
 </html>
