@@ -12,13 +12,7 @@
             --text: #333;
             --light: #f9f6f1;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.7;
@@ -26,34 +20,16 @@
             background: linear-gradient(135deg, #f9f6f1 0%, #e8dcc8 100%);
             min-height: 100vh;
         }
-        
         header {
             background: linear-gradient(135deg, var(--secondary) 0%, #4a3428 100%);
             color: white;
             padding: 3rem 2rem;
             text-align: center;
         }
-        
-        header h1 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-            font-weight: 300;
-        }
-        
-        header p {
-            color: var(--primary);
-        }
-        
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        .report-list {
-            margin-top: 2rem;
-        }
-        
+        header h1 { font-size: 2rem; margin-bottom: 0.5rem; font-weight: 300; }
+        header p { color: var(--primary); }
+        .container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+        .report-list { margin-top: 2rem; }
         .report-item {
             background: white;
             border-radius: 12px;
@@ -67,38 +43,14 @@
             text-decoration: none;
             color: inherit;
         }
-        
-        .report-item:hover {
-            transform: translateX(5px);
-        }
-        
-        .report-date {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--secondary);
-        }
-        
-        .report-meta {
-            color: #666;
-            font-size: 0.9rem;
-            margin-top: 0.3rem;
-        }
-        
-        .arrow {
-            font-size: 1.5rem;
-            color: var(--primary);
-        }
-        
-        .back {
-            display: inline-block;
-            margin-top: 2rem;
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        .back:hover {
-            text-decoration: underline;
-        }
+        .report-item:hover { transform: translateX(5px); }
+        .report-item.new { border-left: 3px solid var(--primary); }
+        .report-date { font-size: 1.2rem; font-weight: 600; color: var(--secondary); }
+        .report-meta { color: #666; font-size: 0.9rem; margin-top: 0.3rem; }
+        .badge { display: inline-block; background: var(--primary); color: white; font-size: 0.7rem; padding: 0.1rem 0.5rem; border-radius: 8px; margin-left: 0.5rem; vertical-align: middle; }
+        .arrow { font-size: 1.5rem; color: var(--primary); }
+        .back { display: inline-block; margin-top: 2rem; color: var(--primary); text-decoration: none; }
+        .back:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
@@ -106,9 +58,15 @@
         <h1>🍺 Brauerei Innovation Reports</h1>
         <p>Wöchentliche Innovationsberichte für die Brauereibranche</p>
     </header>
-    
     <div class="container">
         <div class="report-list">
+            <a href="reports/2026-03-12/index.html" class="report-item new">
+                <div>
+                    <div class="report-date">12. März 2026 <span class="badge">NEU</span></div>
+                    <div class="report-meta">6 Innovationseinträge · Clooney/Crazy Mountain, BERO×Barry's, Modelo NA, Half Acre×Maplewood Fusion, No/Low +22%, Globaler Markt +37%</div>
+                </div>
+                <div class="arrow">→</div>
+            </a>
             <a href="reports/2026-03-04/index.html" class="report-item">
                 <div>
                     <div class="report-date">04. März 2026</div>
@@ -159,7 +117,6 @@
                 <div class="arrow">→</div>
             </a>
         </div>
-        
         <a href="../index.html" class="back">← Zurück zur Übersicht</a>
     </div>
 </body>
