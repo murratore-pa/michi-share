@@ -38,60 +38,88 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             transition: transform 0.2s;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
             text-decoration: none;
             color: inherit;
         }
-        .report-item:hover { transform: translateX(5px); }
-        .report-item.new { border-left: 3px solid var(--primary); }
-        .report-date { font-size: 1.2rem; font-weight: 600; color: var(--secondary); }
-        .report-meta { color: #666; font-size: 0.9rem; margin-top: 0.3rem; }
-        .badge { display: inline-block; background: var(--primary); color: white; font-size: 0.7rem; padding: 0.1rem 0.5rem; border-radius: 8px; margin-left: 0.5rem; vertical-align: middle; }
+        .report-item:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+        .report-date { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.3rem; }
+        .report-meta { color: #666; font-size: 0.9rem; }
         .arrow { font-size: 1.5rem; color: var(--primary); }
-        .back { display: inline-block; margin-top: 2rem; color: var(--primary); text-decoration: none; }
+        .new-badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 0.15rem 0.6rem;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        footer {
+            text-align: center;
+            color: #666;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+        .back { display: inline-block; margin-top: 1rem; color: var(--primary); text-decoration: none; }
         .back:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
     <header>
         <h1>🍺 Brauerei Innovation Reports</h1>
-        <p>Wöchentliche Innovationsberichte für die Brauereibranche</p>
+        <p>Wöchentliche Research-Briefings zu Innovationen und Trends</p>
     </header>
+
     <div class="container">
         <div class="report-list">
-            <a href="reports/2026-03-14b/index.html" class="report-item new">
+            <a href="reports/2026-04-05/index.html" class="report-item">
                 <div>
-                    <div class="report-date">14. März 2026 (Wochenend-Update) <span class="badge">NEU</span></div>
-                    <div class="report-meta">6 Innovationseinträge · Heineken 0.0 Ultimate, Michelob ULTRA Zero #1, GIRL BEER $5M, Full Sail 21J, Stiltrends 2026, KI-Brauerei</div>
+                    <div class="report-date">5. April 2026 <span class="new-badge">NEU</span></div>
+                    <div class="report-meta">6 Innovationseinträge · Cannabis-Bier, Hopwtr/Constellation, AI-Hefe, CO₂-DAC, NA-Gesundheit, Blockchain</div>
+                </div>
+                <div class="arrow">→</div>
+            </a>
+            <a href="reports/2026-03-14b/index.html" class="report-item">
+                <div>
+                    <div class="report-date">14. März 2026 (Wochenend-Update)</div>
+                    <div class="report-meta">6 Innovationseinträge · Heineken 0.0 Ultimate, Michelob ULTRA Zero, GIRL BEER, Full Sail, Stiltrends, Smart Brewing</div>
                 </div>
                 <div class="arrow">→</div>
             </a>
             <a href="reports/2026-03-14/index.html" class="report-item">
                 <div>
                     <div class="report-date">14. März 2026</div>
-                    <div class="report-meta">6 Innovationseinträge · Clooney/Crazy Mountain, Heineken 0.0 Ultimate, Samuel Adams Sports-Pack, Chicago-Krise, Athletic UK-Expansion, DACH NA-Helles</div>
+                    <div class="report-meta">6 Innovationseinträge · Heineken, Athletic UK-Expansion, DACH NA-Helles</div>
                 </div>
                 <div class="arrow">→</div>
             </a>
             <a href="reports/2026-03-12/index.html" class="report-item">
                 <div>
                     <div class="report-date">12. März 2026</div>
-                    <div class="report-meta">6 Innovationseinträge · Clooney/Crazy Mountain, BERO×Barry's, Modelo NA, Half Acre×Maplewood Fusion, No/Low +22%, Globaler Markt +37%</div>
+                    <div class="report-meta">6 Innovationseinträge · HEINEKEN Digital, Corona Cero, Non-Alc-Wachstum, AI-Logistik, Packaging</div>
                 </div>
                 <div class="arrow">→</div>
             </a>
             <a href="reports/2026-03-04/index.html" class="report-item">
                 <div>
-                    <div class="report-date">04. März 2026</div>
-                    <div class="report-meta">6 Innovationseinträge · Corona Cero, Tilray×BrewDog, Sinless-Expansion, Packaging-Compliance, CH-Verpackungsstudie</div>
+                    <div class="report-date">4. März 2026</div>
+                    <div class="report-meta">6 Innovationseinträge · AB InBev R&D, BrewDog, Functional, Yerba Mate, Logistik</div>
                 </div>
                 <div class="arrow">→</div>
             </a>
             <a href="reports/2026-03-02/index.html" class="report-item">
                 <div>
-                    <div class="report-date">02. März 2026</div>
-                    <div class="report-meta">6 Innovationseinträge · HEINEKEN Digital, Corona Cero, Non-Alc-Wachstum, AI-Logistik, Packaging</div>
+                    <div class="report-date">2. März 2026</div>
+                    <div class="report-meta">6 Innovationseinträge · Flavour-Trends, Peroni 0.0, Yerba Mate, Logistik-Automation, Functional</div>
                 </div>
                 <div class="arrow">→</div>
             </a>
