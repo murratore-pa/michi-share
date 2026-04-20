@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brauerei Innovation Report – 20. April 2026</title>
+    <style>
+        :root { --primary: #d4a574; --secondary: #2c1810; --text: #333; --light: #f9f6f1; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: var(--text); background: linear-gradient(135deg, #f9f6f1 0%, #e8dcc8 100%); }
+        header { background: linear-gradient(135deg, var(--secondary) 0%, #4a3428 100%); color: white; padding: 4rem 2rem; text-align: center; position: relative; overflow: hidden; }
+        header::before { content: "🍺"; position: absolute; font-size: 15rem; opacity: 0.05; right: -2rem; top: -2rem; }
+        header h1 { font-size: 2.4rem; margin-bottom: 0.6rem; font-weight: 300; }
+        header p { color: var(--primary); font-size: 1.1rem; }
+        .container { max-width: 920px; margin: 0 auto; padding: 2rem; }
+        .summary, .innovation, .conclusion { background: white; border-radius: 16px; padding: 2rem; margin: 1.5rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .summary { border-left: 4px solid var(--primary); }
+        .innovation h3 { color: var(--secondary); font-size: 1.2rem; margin-bottom: 0.8rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+        .tag { display: inline-block; color: white; padding: 0.2rem 0.75rem; border-radius: 12px; font-size: 0.75rem; }
+        .market { background: #6b2c91; }
+        .product { background: #8b4513; }
+        .strategy { background: #444; }
+        .packaging { background: #2c5aa0; }
+        .ch { background: #228b22; }
+        .trend { background: #ff6b35; }
+        .tech { background: #0077b6; }
+        .celebrity { background: #c0392b; }
+        .consolidation { background: #7f8c8d; }
+        .nolow { background: #27ae60; }
+        .sustainability { background: #2e7d32; }
+        .science { background: #1565c0; }
+        .startup { background: #e65100; }
+        .relevance { background: var(--light); border-left: 3px solid var(--primary); border-radius: 8px; padding: 1rem; margin-top: 1rem; }
+        .source { margin-top: 1rem; font-size: 0.92rem; }
+        .source a { color: var(--primary); text-decoration: none; }
+        .source a:hover { text-decoration: underline; }
+        .conclusion { background: linear-gradient(135deg, var(--secondary) 0%, #4a3428 100%); color: white; }
+        .conclusion h2 { margin-bottom: 0.9rem; }
+        .conclusion ul { margin-left: 1.25rem; }
+        .conclusion li { margin: 0.45rem 0; }
+        footer { text-align: center; color: #666; padding: 2rem; font-size: 0.9rem; }
+        .back { display: inline-block; margin-top: 1rem; color: var(--primary); text-decoration: none; }
+        .back:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🍺 Brauerei Innovation Report</h1>
+        <p>20. April 2026 · Fokus Global + CH/EU</p>
+    </header>
+
+    <div class="container">
+        <section class="summary">
+            <h2>📋 Kurzfazit</h2>
+            <p>Die aktuelle Woche zeigt zwei gegenlaeufige Trends: Waehrend der US-Craft-Beer-Markt erneut schrumpft (5.1% Produktionsrueckgang, 481 Brauereien geschlossen), boomen funktionelle Getraenke und No/Low-Alkohol-Lsungen. Rosalind Bioculture bringt NAD+-produzierende Bierhefe auf den Markt – ein Durchbruch fuer Longevity-Biere. EvodiaBio (Dänemark, 45 Mio. Euro Finanzierung) und Yeastup AG (Schweiz, Series A) zeigen, dass Fermentationstechnologie und Upcycling zentrale Innovationsfelder sind. UK-Brauereien testen bereits Wrmepumpen zur Dekarbonisierung.</p>
+        </section>
+
+        <section class="innovation">
+            <h3>
+                <span class="tag tech">Tech</span>
+                <span class="tag science">Science</span>
+                <span class="tag nolow">No/Low</span>
+                NAD+ Hefekultur fuer Longevity-Bier
+            </h3>
+            <p>Das israelische Startup Rosalind Bioculture entwickelt Bierhefe, die waehrend der Fermentation NAD+ produziert – ein Molekuel, das im Zentrum der Anti-Aging-Forschung steht. Die Food-as-Medicine Plattform ermöglicht Brauereien, funktionelle Getraenke ohne Aenderung ihrer bestehenden Produktionsprozesse herzustellen. Das 2024 gegruendete Unternehmen mit nur 3 Mitarbeitern zeigt, wie Biotechnologie und Braukunst verschmelzen.</p>
+            <div class="relevance">
+                <strong>CH/EU-Relevanz:</strong> Schweizer und europaeische Brauereien koennten von dieser Technologie profitieren. Die NAD+-Forschung ist auch in europaeischen Labors aktiv.Fuer CH-Brauereien bietet sich die Chance, eigene funktionelle Bier-Konzepte zu entwickeln.
+            </div>
+            <div class="source">
+                Quellen: <a href="https://ros.bio/" target="_blank">Rosalind Bioculture</a> · <a href="https://www.beveragedaily.com/Article/2026/04/17/functional-beverage-trends-ai-clean-label-and-personalisation/" target="_blank">BeverageDaily – Functional Trends</a>
+            </div>
+        </section>
+
+        <section class="innovation">
+            <h3>
+                <span class="tag tech">Tech</span>
+                <span class="tag startup">Startup</span>
+                <span class="tag nolow">No/Low</span>
+                Fermentations-basierte Aromen fuer besseres Non-Alk-Bier
+            </h3>
+            <p>EvodiaBio aus Kopenhagen entwickelt eine Hefe-basierte Technologie, die natuerliche Aromen erzeugt und Non-Alkohol-Bier deutlich besser schmecken laesst als konventionelle Varianten. Das Startup hat im Dezember 2025 eine Finanzierungsrunde von 45 Millionen Euro abgeschlossen (Series B). Die Technologie zielt darauf ab, die Sensorische Luecke zwischen alkoholfreiem und konventionellem Bier zu schliessen.</p>
+            <div class="relevance">
+                <strong>CH/EU-Relevanz:</strong> Als dänisches Startup ist EvodiaBio Teil des europaeischen Biotech-Ökosystems. Schweizer Brauereien wie Feldschloesschen oder Cardinal koennten von diesen Aromatechnologien profitieren, um ihre NA-Portfolios aufzuwerten.
+            </div>
+            <div class="source">
+                Quellen: <a href="https://evodiabio.com/" target="_blank">EvodiaBio</a> · <a href="https://www.beveragedaily.com/Article/2026/04/17/functional-beverage-trends-ai-clean-label-and-personalisation/" target="_blank">BeverageDaily – Functional Trends</a>
+            </div>
+        </section>
+
+        <section class="innovation">
+            <h3>
+                <span class="tag sustainability">Nachhaltigkeit</span>
+                <span class="tag tech">Tech</span>
+                Wrmepumpen-Technologie fuer Dekarbonisierung
+            </h3>
+            <p>Eine Sussex-Brauerei in Grossbritannien ersetzt Gas-dampf durch Hochtemperatur-Wrmepumpen und recycelt Abwrme fuer den naechsten Sud. Das Pilotprojekt zeigt das Dekarbonisierungspotenzial in der Bierproduktion auf. Wrmepumpen sind eine der wenigen Technologien, die fossil-free Brauen bei industriellen Temperaturen moeglich machen.</p>
+            <div class="relevance">
+                <strong>CH/EU-Relevanz:</strong> Die EU-Energiepolitik und Schweizer CO2-Gesetz pushen Brauereien Richtung Dekarbonisierung. Das Pilotprojekt in UK dient als Blaupause fuer europaeische und Schweizer Brauereien, die ihre Energieinfrastruktur umstellen muessen.
+            </div>
+            <div class="source">
+                Quellen: <a href="https://x.com/janrosenow/status/2019351078035460263" target="_blank">Jan Rosenow auf X</a> · <a href="https://www.beveragedaily.com/Article/2026/04/17/functional-beverage-trends-ai-clean-label-and-personalisation/" target="_blank">BeverageDaily – Functional Trends</a>
+            </div>
+        </section>
+
+        <section class="innovation">
+            <h3>
+                <span class="tag sustainability">Nachhaltigkeit</span>
+                <span class="tag startup">Startup</span>
+                <span class="tag ch">CH</span>
+                Bierhefe-Upcycling fuer funktionelle Lebensmittel
+            </h3>
+            <p>Yeastup AG aus der Schweiz upcycelt Bierhefe-Nebenprodukte zu hochwertigen Ingredients. Das Startup verbindet zirkulaere Oekonomie mit funktionellen Lebensmitteln und hat 2024 eine Series-A-Finanzierung erhalten. Bierhefe ist reich an Protein und B-Vitaminen – ein idealer Rohstoff fuer Nahrungsergaenzung und Functional Food.</p>
+            <div class="relevance">
+                <strong>CH-Relevanz:</strong> Yeastup AG ist ein Schweizer Unternehmen und zeigt, dass Upcycling im Brauerei-Sektor auch hierzulande funktioniert. Das Startup koennte fuer Schweizer Brauereien interessant sein, die ihre Nebenstroeme verwerten moechten.
+            </div>
+            <div class="source">
+                Quellen: <a href="https://yeastup.com/" target="_blank">Yeastup AG</a> · <a href="https://www.beveragedaily.com/Article/2026/04/17/functional-beverage-trends-ai-clean-label-and-personalisation/" target="_blank">BeverageDaily – Functional Trends</a>
+            </div>
+        </section>
+
+        <section class="innovation">
+            <h3>
+                <span class="tag trend">Trend</span>
+                <span class="tag product">Product</span>
+                Return to Basics – balancierte Lagers statt Hazy IPAs
+            </h3>
+            <p>Der Geschmackstrend zeigt eine klare Bewegung weg von uebersprudelten Hazy IPAs hin zu balancierten Lagern, Pilsnern und klassischen Bierstilen. Fokus auf Drinkability, Nuancen und fundamentale Braukunst statt Hype. Diese "Future Classics"-Bewegung signalisiert eine Reife des Craft-Beer-Marktes, der sich von Experimenten zu verfeinerten Klassikern bewegt.</p>
+            <div class="relevance">
+                <strong>CH/EU-Relevanz:</strong> Schweizer Brauereien wie UnserOriginal oder Brauerei Fischer haben mit ihren Lagern und Pilsnern eine lange Tradition. Dieser Trend bestaetigt ihre Position und bietet Chancen fuer Qualitaets-Brauereien.
+            </div>
+            <div class="source">
+                Quellen: <a href="https://x.com/OriglioBev/status/2044748645132595369" target="_blank">Origlio Beverage auf X</a> · <a href="https://www.beveragedaily.com/Article/2026/04/17/us-craft-beer-industry-trends-2025-market-stats/" target="_blank">BeverageDaily – Craft Beer Trends</a>
+            </div>
+        </section>
+
+        <section class="innovation">
+            <h3>
+                <span class="tag trend">Trend</span>
+                <span class="tag product">Product</span>
+                Functional Layering – mehrere Benefits in einem Getraenk
+            </h3>
+            <p>Die naechste Generation funktioneller Getraenke setzt auf "Layering" – mehrere funktionelle Benefits in einem einzigen Produkt kombiniert. Personalisierung und Clean Label werden zum zentralen Differenzierungsfaktor. Bier mit adaptogenen Zutaten, Vitaminen und sekundaeren Pflanzenstoffen wird denkbar.</p>
+            <div class="relevance">
+                <strong>CH/EU-Relevanz:</strong> Dieser Trend passt zu den Schweizer Verbraucherpraferenzen fuer clean label und natuerliche Produkte. Schweizer Brauereien koennten mit funktionellen Bieren neue Marktsegmente erschliessen.
+            </div>
+            <div class="source">
+                Quellen: <a href="https://www.beveragedaily.com/Article/2026/04/17/functional-beverage-trends-ai-clean-label-and-personalisation/" target="_blank">BeverageDaily – Functional Trends</a> · <a href="https://www.beveragedaily.com/Article/2026/04/17/us-craft-beer-industry-trends-2025-market-stats/" target="_blank">BeverageDaily – Craft Beer Stats</a>
+            </div>
+        </section>
+
+        <section class="conclusion">
+            <h2>🎯 Takeaways fuer die Schweizer Brauerei-Branche</h2>
+            <ul>
+                <li><strong>No/Low-Alkohol ist der Wachstumstreiber:</strong> Athletic Brewing und Best Day Brewing zeigen, dass alkoholfreie Biere der wichtigste Wachstumsbereich sind. Schweizer Brauereien sollten ihr NA-Portfolio strategisch ausbauen.</li>
+                <li><strong>Biotechnologie als Differenzierungsfaktor:</strong> Rosalind Bioculture und EvodiaBio zeigen, dass Fermentationstechnologie Wettbewerbsvorteile schafft. Kooperationen mit Biotech-Startups koennten fuer CH-Brauereien interessant sein.</li>
+                <li><strong>Upcycling als Nachhaltigkeitsstrategie:</strong> Yeastup AG demonstriert, dass Bierhefe-Upcycling funktioniert. Das verbessert die Oekobilanz und erschliesst neue Einnahmequellen.</li>
+                <li><strong>Dekarbonisierung wird Pflicht:</strong> Wrmepumpen und Abwrmenutzung sind keine Option mehr, sondern Notwendigkeit. Schweizer Brauereien muessen frueher oder spaeter investieren.</li>
+                <li><strong>Qualitaet ueber Hype:</strong> Der Trend zu klassischen Bieren bestaetigt Schweizer Brautradition. Lagern und Pilsner sind keine Nische, sondern die Zukunft.</li>
+            </ul>
+        </section>
+
+        <a href="../../index.html" class="back">← Zurueck zur Uebersicht</a>
+    </div>
+
+    <footer>
+        <p>🍺 Brauerei Innovation Report · 20. April 2026 · Automatisch generiert von Alfred</p>
+    </footer>
+</body>
+</html>
