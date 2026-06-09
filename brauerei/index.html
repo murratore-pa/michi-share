@@ -3,261 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brauerei Innovation Reports</title>
+    <title>Bier-Innovationen Archive</title>
     <style>
-        :root {
-            --primary: #d4a574;
-            --secondary: #2c1810;
-            --accent: #f4e4c1;
-            --text: #333;
-            --light: #f9f6f1;
-        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            color: var(--text);
-            background: linear-gradient(135deg, #f9f6f1 0%, #e8dcc8 100%);
-            min-height: 100vh;
-        }
-        header {
-            background: linear-gradient(135deg, var(--secondary) 0%, #4a3428 100%);
-            color: white;
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-        header h1 { font-size: 2rem; margin-bottom: 0.5rem; font-weight: 300; }
-        header p { color: var(--primary); }
-        .container { max-width: 800px; margin: 0 auto; padding: 2rem; }
-        .report-list { margin-top: 2rem; }
-        .report-item {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: transform 0.2s;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-decoration: none;
-            color: inherit;
-        }
-        .report-item:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
-        .report-date { font-weight: 600; font-size: 1.1rem; margin-bottom: 0.3rem; }
-        .report-meta { color: #666; font-size: 0.9rem; }
-        .arrow { font-size: 1.5rem; color: var(--primary); }
-        .new-badge {
-            display: inline-block;
-            background: #e74c3c;
-            color: white;
-            padding: 0.15rem 0.6rem;
-            border-radius: 8px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            margin-left: 0.5rem;
-            vertical-align: middle;
-            animation: pulse 2s infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-        footer {
-            text-align: center;
-            color: #666;
-            padding: 2rem;
-            font-size: 0.9rem;
-        }
-        .back { display: inline-block; margin-top: 1rem; color: var(--primary); text-decoration: none; }
-        .back:hover { text-decoration: underline; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; background: #fafafa; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; margin-bottom: 60px; }
+        h1 { font-size: 2.5em; margin-bottom: 10px; color: #2c3e50; }
+        .subtitle { color: #7f8c8d; font-size: 1.1em; margin-bottom: 30px; }
+        .archive { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .report-card { background: white; padding: 25px; border-radius: 8px; border-left: 4px solid #d4af37; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; }
+        .report-card:hover { transform: translateY(-4px); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+        .report-date { font-weight: bold; font-size: 1.2em; color: #2c3e50; margin-bottom: 8px; }
+        .report-link { display: inline-block; margin-top: 15px; padding: 8px 16px; background: #d4af37; color: #1a1a1a; text-decoration: none; border-radius: 4px; font-weight: 500; transition: background 0.2s; }
+        .report-link:hover { background: #c49f2e; }
+        footer { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #ddd; color: #7f8c8d; font-size: 0.9em; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>🍺 Brauerei Innovation Reports</h1>
-        <p>Wöchentliche Research-Briefings zu Innovationen und Trends</p>
-    </header>
-
     <div class="container">
-        <div class="report-list">
-            <a href="reports/2026-06-01/index.html" class="report-item">
-                <div>
-                    <div class="report-date">1. Juni 2026 <span class="new-badge">NEU</span></div>
-                    <div class="report-meta">6 Innovationseinträge · Hopfen-Genom, NA-Technologie, KI-Planung, Nachhaltigkeit, Klimawandel</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-05-27/index.html" class="report-item">
-                <div>
-                    <div class="report-date">27. Mai 2026</div>
-                    <div class="report-meta">6 Innovationseinträge · No/Low-Alcohol, Community-Equity, Beyond Beer, Alt-Meat, Marktconsolidierung</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-05-25/index.html" class="report-item">
-                <div>
-                    <div class="report-date">25. Mai 2026</div>
-                    <div class="report-meta">6 Innovationseinträge · Marktkonsolidierung, No/Low-Alcohol, Nachhaltigkeit, KI-Technologie</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-05-20/index.html" class="report-item">
-                <div>
-                    <div class="report-date">20. Mai 2026</div>
-                    <div class="report-meta">6 Innovationseinträge · Nachhaltigkeit, No/Low-Alcohol, Automatisierung, Markttrends</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-05-18/index.html" class="report-item">
-                <div>
-                    <div class="report-date">18. Mai 2026</div>
-                    <div class="report-meta">6 Innovationseinträge · Nachhaltigkeit, AI, Precision Fermentation, Kreislaufwirtschaft, Crossover-Styles</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-05-13/index.html" class="report-item">
-                <div>
-                    <div class="report-date">13. Mai 2026</div>
-                    <div class="report-meta">6 Innovationseinträge · Biotech, Hopfenkonzentrate, Clean Beer, Mid-Strength, NA-Wachstum</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-05-11/index.html" class="report-item">
-                <div>
-                    <div class="report-date">11. Mai 2026</div>
-                    <div class="report-meta">7 Innovationseintraege · Nachhaltigkeit, Funktionale 0.0%, Colorado Craft, Robotik, Clean Label</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-05-06/index.html" class="report-item">
-                <div>
-                    <div class="report-date">6. Mai 2026</div>
-                    <div class="report-meta">7 Innovationseintraege · Zero-ABV, Return-to-Classics, Structural-NA-Growth, High-ABV, NovaBrew, BinaryBeer, Tilray/BrewDog</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-05-04/index.html" class="report-item">
-                <div>
-                    <div class="report-date">4. Mai 2026</div>
-                    <div class="report-meta">6 Innovationseintraege · Zero-ABV, Tilray/BrewDog, Waermepumpen, Upcycling, IoT, Home Brewing</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-04-29/index.html" class="report-item">
-                <div>
-                    <div class="report-date">29. April 2026</div>
-                    <div class="report-meta">6 Innovationseintraege · Brewery-Tech, NA-Marktboom, IoT-Monitoring, AB-InBev Workforce, Protein Beverages, World Beer Cup</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-04-27/index.html" class="report-item">
-                <div>
-                    <div class="report-date">27. April 2026</div>
-                    <div class="report-meta">6 Innovationseintraege · Stone/Firestone, Brotein, Sennos, NA-Trend, CO2Brew, Fermentation</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-04-20/index.html" class="report-item">
-                <div>
-                    <div class="report-date">20. April 2026</div>
-                    <div class="report-meta">6 Innovationseintraege · NAD+-Hefe, EvodiaBio Aromen, Waermepumpen, Yeastup Upcycling, Return to Basics, Functional Layering</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-04-13/index.html" class="report-item">
-                <div>
-                    <div class="report-date">13. April 2026</div>
-                    <div class="report-meta">5 Innovationseintraege · CSIRO-Rueckzug, Koji Cocoa, Private Label, High-ABV, Shiru/Ingredion</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-04-06/index.html" class="report-item">
-                <div>
-                    <div class="report-date">6. April 2026</div>
-                    <div class="report-meta">6 Innovationseintraege · Precision Fermentation, DAC-CO2, KI-Aromavorhersage, Constellation/Hopwtr, Membranfiltration, Cannabis</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-04-05/index.html" class="report-item">
-                <div>
-                    <div class="report-date">5. April 2026</div>
-                    <div class="report-meta">6 Innovationseinträge · Cannabis-Bier, Hopwtr/Constellation, AI-Hefe, CO₂-DAC, NA-Gesundheit, Blockchain</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-03-14b/index.html" class="report-item">
-                <div>
-                    <div class="report-date">14. März 2026 (Wochenend-Update)</div>
-                    <div class="report-meta">6 Innovationseinträge · Heineken 0.0 Ultimate, Michelob ULTRA Zero, GIRL BEER, Full Sail, Stiltrends, Smart Brewing</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-03-14/index.html" class="report-item">
-                <div>
-                    <div class="report-date">14. März 2026</div>
-                    <div class="report-meta">6 Innovationseinträge · Heineken, Athletic UK-Expansion, DACH NA-Helles</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-03-12/index.html" class="report-item">
-                <div>
-                    <div class="report-date">12. März 2026</div>
-                    <div class="report-meta">6 Innovationseinträge · HEINEKEN Digital, Corona Cero, Non-Alc-Wachstum, AI-Logistik, Packaging</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-03-04/index.html" class="report-item">
-                <div>
-                    <div class="report-date">4. März 2026</div>
-                    <div class="report-meta">6 Innovationseinträge · AB InBev R&D, BrewDog, Functional, Yerba Mate, Logistik</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-03-02/index.html" class="report-item">
-                <div>
-                    <div class="report-date">2. März 2026</div>
-                    <div class="report-meta">6 Innovationseinträge · Flavour-Trends, Peroni 0.0, Yerba Mate, Logistik-Automation, Functional</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-02-25/index.html" class="report-item">
-                <div>
-                    <div class="report-date">25. Februar 2026</div>
-                    <div class="report-meta">6 Innovationseinträge · Flavour-Trends, Peroni 0.0 Flavours, Yerba Mate, Logistik-Automation, Functional, BrewDog</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-02-23/index.html" class="report-item">
-                <div>
-                    <div class="report-date">23. Februar 2026</div>
-                    <div class="report-meta">6 Innovationseinträge · AB InBev R&D/No-Low, BrewDog, Functional, Yerba Mate, Logistik</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-02-20/index.html" class="report-item">
-                <div>
-                    <div class="report-date">20. Februar 2026</div>
-                    <div class="report-meta">6 Innovationseinträge · BrewDog, AB InBev, Functional, Yerba Mate, Logistik &amp; Energie</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-02-19/index.html" class="report-item">
-                <div>
-                    <div class="report-date">19. Februar 2026</div>
-                    <div class="report-meta">12 Innovationseinträge · Heineken 0.0, BrewDog, Yerba Mate, Alkoholfrei-Trends</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
-            <a href="reports/2026-02-16/index.html" class="report-item">
-                <div>
-                    <div class="report-date">16. Februar 2026</div>
-                    <div class="report-meta">12 Innovationseinträge · Smart Yeast, KI, Nachhaltigkeit, Functional Drinks</div>
-                </div>
-                <div class="arrow">→</div>
-            </a>
+        <header>
+            <h1>🍺 Bier-Innovationen Archive</h1>
+            <p class="subtitle">Tägliche Analysen von Trends & Neuheiten im globalen Biermarkt</p>
+        </header>
+
+        <div class="archive">
+            <div class="report-card">
+                <div class="report-date">9. Juni 2026</div>
+                <p>Health-Conscious Beer, Heineken NA-Flavors, THC-Verbot Krise, Value-Positioning, Experience-Led Retail, Nachhaltigkeit als Compliance</p>
+                <a href="reports/2026-06-09/" class="report-link">Zum Report →</a>
+            </div>
+
+            <div class="report-card">
+                <div class="report-date">7. Juni 2026</div>
+                <p>Low-ABV dominiert, Heineken Ultimate & Flavours, BrewVo Nested Fermentation, Hybrid Styles, Hyper-Lokalisierung, KI Precision Brewing</p>
+                <a href="reports/2026-06-07/" class="report-link">Zum Report →</a>
+            </div>
+
+            <div class="report-card">
+                <div class="report-date">5. Juni 2026</div>
+                <p>NA-Boom, Fruchtflavors, Premium-Plus Wachstum, Craft NA etabliert, Diversification, Wellness-Innovation</p>
+                <a href="reports/2026-06-05/" class="report-link">Zum Report →</a>
+            </div>
+
+            <div class="report-card">
+                <div class="report-date">3. Juni 2026</div>
+                <p>Wertorientierung, Session-Lager-Trends, NA-Markt $26B, KI-Sensorik, nachhaltige Verpackung, Portfolio-Straffung</p>
+                <a href="reports/2026-06-03/" class="report-link">Zum Report →</a>
+            </div>
+
+            <div class="report-card">
+                <div class="report-date">1. Juni 2026</div>
+                <p>Heineken Flavor-Expansion, NA-Markt $25B, Lager-Renaissance, Bioplastik, Hemp-THC, Craft Correction</p>
+                <a href="reports/2026-06-01/" class="report-link">Zum Report →</a>
+            </div>
+
+            <div class="report-card">
+                <div class="report-date">30. Mai 2026</div>
+                <p>Low-ABV Mega-Trend, NA-Markt $22,1B, KI-Revolution, Lager-Dominanz, Nachhaltigkeit, Premium-Hybrids</p>
+                <a href="reports/2026-05-30/" class="report-link">Zum Report →</a>
+            </div>
+
+            <div class="report-card">
+                <div class="report-date">24. Mai 2026</div>
+                <p>Low-ABV Boom, Heineken 0.0 Triple Zero, NA-Markt $583M, nachhaltige Verpackung, Flavor-Innovation, Smart Brewing</p>
+                <a href="reports/2026-05-24/" class="report-link">Zum Report →</a>
+            </div>
+
+            <div class="report-card">
+                <div class="report-date">22. Mai 2026</div>
+                <p>Low-ABV Welle, Premium Lager Renaissance, NA-Markt über $1B, Blockchain Supply-Chain, Wassertechnologie, Flavor-Hybrids</p>
+                <a href="reports/2026-05-22/" class="report-link">Zum Report →</a>
+            </div>
+
+            <div class="report-card">
+                <div class="report-date">20. Mai 2026</div>
+                <p>NOLO-Enzymatik, NA-Boom bis 2030, KI-Rezeptentwicklung, leichte Flaschen, West Coast IPA, Premium Barrel-Aged</p>
+                <a href="reports/2026-05-20/" class="report-link">Zum Report →</a>
+            </div>
+
+            <div class="report-card">
+                <div class="report-date">18. Mai 2026</div>
+                <p>Heineken 0.0 Ultimate, Flavoured Lagers, Craft NA-IPAs, Gluten-Free Mainstream, Mainstream NA, Brewing-Technologie</p>
+                <a href="reports/2026-05-18/" class="report-link">Zum Report →</a>
+            </div>
+
+            <div class="report-card">
+                <div class="report-date">17. Mai 2026</div>
+                <p>Nachhaltige Verpackung, West Coast IPA, KI-Brauoptimierung, Fruchtflavours, Alkoholfrei-Boom, Upcycled Ingredients</p>
+                <a href="reports/2026-05-17/" class="report-link">Zum Report →</a>
+            </div>
+
+            <div class="report-card">
+                <div class="report-date">15. Mai 2026</div>
+                <p>Sonnenbräu Gold Award, Apple-Flavors, Session Lager, Value-Strategien, Hyperlocal Brewing, nachhaltige Zutaten</p>
+                <a href="reports/2026-05-15/" class="report-link">Zum Report →</a>
+            </div>
+
+            <div class="report-card">
+                <div class="report-date">13. Mai 2026</div>
+                <p>Alkoholfrei-Boom, Smart Brewing, Nachhaltigkeit, West Coast IPA, Value-Paradoxon, Gaming-Marketing</p>
+                <a href="reports/2026-05-13/" class="report-link">Zum Report →</a>
+            </div>
         </div>
-        <a href="../index.html" class="back">← Zurück zur Übersicht</a>
+
+        <footer>
+            <p>🍺 Bier-Innovationen • Täglich recherchiert & kompiliert</p>
+            <p style="margin-top: 15px;">🎩 Powered by <a href="https://base44.com" style="color: #d4af37;">Base44</a> & Alfred</p>
+        </footer>
     </div>
 </body>
 </html>
