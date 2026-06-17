@@ -5,112 +5,246 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bier-Innovationen Archive</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #1a1a1a; background: #fafafa; }
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        header { text-align: center; margin-bottom: 60px; }
-        h1 { font-size: 2.5em; margin-bottom: 10px; color: #2c3e50; }
-        .subtitle { color: #7f8c8d; font-size: 1.1em; margin-bottom: 30px; }
-        .archive { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .report-card { background: white; padding: 25px; border-radius: 8px; border-left: 4px solid #d4af37; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.2s, box-shadow 0.2s; }
-        .report-card:hover { transform: translateY(-4px); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
-        .report-date { font-weight: bold; font-size: 1.2em; color: #2c3e50; margin-bottom: 8px; }
-        .report-link { display: inline-block; margin-top: 15px; padding: 8px 16px; background: #d4af37; color: #1a1a1a; text-decoration: none; border-radius: 4px; font-weight: 500; transition: background 0.2s; }
-        .report-link:hover { background: #c49f2e; }
-        footer { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid #ddd; color: #7f8c8d; font-size: 0.9em; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro {
+            background: #f0f4f8;
+            border-left: 4px solid #d4a574;
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 4px;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+        
+        .reports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .report-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-left: 5px solid #d4a574;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .report-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(212, 165, 116, 0.25);
+            border-color: #d4a574;
+        }
+        
+        .report-date {
+            font-size: 0.9em;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+        
+        .report-title {
+            color: #8b6f47;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .report-description {
+            color: #666;
+            font-size: 0.95em;
+            line-height: 1.5;
+            flex-grow: 1;
+            margin-bottom: 15px;
+        }
+        
+        .report-link {
+            display: inline-block;
+            background: #d4a574;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: background 0.3s;
+            text-align: center;
+        }
+        
+        .report-link:hover {
+            background: #8b6f47;
+        }
+        
+        .latest-badge {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        
+        .footer {
+            background: #f0f4f8;
+            padding: 30px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .reports-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
+        <div class="header">
             <h1>🍺 Bier-Innovationen Archive</h1>
-            <p class="subtitle">Tägliche Analysen von Trends & Neuheiten im globalen Biermarkt</p>
-        </header>
-
-        <div class="archive">
-            <div class="report-card">
-                <div class="report-date">9. Juni 2026</div>
-                <p>Health-Conscious Beer, Heineken NA-Flavors, THC-Verbot Krise, Value-Positioning, Experience-Led Retail, Nachhaltigkeit als Compliance</p>
-                <a href="reports/2026-06-09/" class="report-link">Zum Report →</a>
+            <p>Wöchentliche Reports zu Marktaktualität und Trends</p>
+        </div>
+        
+        <div class="content">
+            <div class="intro">
+                <strong>Willkommen!</strong> Hier finden Sie eine Sammlung wöchentlicher Reports über die neuesten Innovationen und Trends im globalen Biermarkt — sowohl bei alkoholischen als auch alkoholfreien Bieren. Jeden Sonntag werden neue Erkenntnisse aus Marktforschung, Industrie-News und Produktinnovationen zusammengefasst.
             </div>
-
-            <div class="report-card">
-                <div class="report-date">7. Juni 2026</div>
-                <p>Low-ABV dominiert, Heineken Ultimate & Flavours, BrewVo Nested Fermentation, Hybrid Styles, Hyper-Lokalisierung, KI Precision Brewing</p>
-                <a href="reports/2026-06-07/" class="report-link">Zum Report →</a>
-            </div>
-
-            <div class="report-card">
-                <div class="report-date">5. Juni 2026</div>
-                <p>NA-Boom, Fruchtflavors, Premium-Plus Wachstum, Craft NA etabliert, Diversification, Wellness-Innovation</p>
-                <a href="reports/2026-06-05/" class="report-link">Zum Report →</a>
-            </div>
-
-            <div class="report-card">
-                <div class="report-date">3. Juni 2026</div>
-                <p>Wertorientierung, Session-Lager-Trends, NA-Markt $26B, KI-Sensorik, nachhaltige Verpackung, Portfolio-Straffung</p>
-                <a href="reports/2026-06-03/" class="report-link">Zum Report →</a>
-            </div>
-
-            <div class="report-card">
-                <div class="report-date">1. Juni 2026</div>
-                <p>Heineken Flavor-Expansion, NA-Markt $25B, Lager-Renaissance, Bioplastik, Hemp-THC, Craft Correction</p>
-                <a href="reports/2026-06-01/" class="report-link">Zum Report →</a>
-            </div>
-
-            <div class="report-card">
-                <div class="report-date">30. Mai 2026</div>
-                <p>Low-ABV Mega-Trend, NA-Markt $22,1B, KI-Revolution, Lager-Dominanz, Nachhaltigkeit, Premium-Hybrids</p>
-                <a href="reports/2026-05-30/" class="report-link">Zum Report →</a>
-            </div>
-
-            <div class="report-card">
-                <div class="report-date">24. Mai 2026</div>
-                <p>Low-ABV Boom, Heineken 0.0 Triple Zero, NA-Markt $583M, nachhaltige Verpackung, Flavor-Innovation, Smart Brewing</p>
-                <a href="reports/2026-05-24/" class="report-link">Zum Report →</a>
-            </div>
-
-            <div class="report-card">
-                <div class="report-date">22. Mai 2026</div>
-                <p>Low-ABV Welle, Premium Lager Renaissance, NA-Markt über $1B, Blockchain Supply-Chain, Wassertechnologie, Flavor-Hybrids</p>
-                <a href="reports/2026-05-22/" class="report-link">Zum Report →</a>
-            </div>
-
-            <div class="report-card">
-                <div class="report-date">20. Mai 2026</div>
-                <p>NOLO-Enzymatik, NA-Boom bis 2030, KI-Rezeptentwicklung, leichte Flaschen, West Coast IPA, Premium Barrel-Aged</p>
-                <a href="reports/2026-05-20/" class="report-link">Zum Report →</a>
-            </div>
-
-            <div class="report-card">
-                <div class="report-date">18. Mai 2026</div>
-                <p>Heineken 0.0 Ultimate, Flavoured Lagers, Craft NA-IPAs, Gluten-Free Mainstream, Mainstream NA, Brewing-Technologie</p>
-                <a href="reports/2026-05-18/" class="report-link">Zum Report →</a>
-            </div>
-
-            <div class="report-card">
-                <div class="report-date">17. Mai 2026</div>
-                <p>Nachhaltige Verpackung, West Coast IPA, KI-Brauoptimierung, Fruchtflavours, Alkoholfrei-Boom, Upcycled Ingredients</p>
-                <a href="reports/2026-05-17/" class="report-link">Zum Report →</a>
-            </div>
-
-            <div class="report-card">
-                <div class="report-date">15. Mai 2026</div>
-                <p>Sonnenbräu Gold Award, Apple-Flavors, Session Lager, Value-Strategien, Hyperlocal Brewing, nachhaltige Zutaten</p>
-                <a href="reports/2026-05-15/" class="report-link">Zum Report →</a>
-            </div>
-
-            <div class="report-card">
-                <div class="report-date">13. Mai 2026</div>
-                <p>Alkoholfrei-Boom, Smart Brewing, Nachhaltigkeit, West Coast IPA, Value-Paradoxon, Gaming-Marketing</p>
-                <a href="reports/2026-05-13/" class="report-link">Zum Report →</a>
+            
+            <div class="reports-grid">
+                <a href="reports/2026-06-17/index.html" class="report-card">
+                    <span class="latest-badge">🆕 Neuester Report</span>
+                    <div class="report-date">17. Juni 2026</div>
+                    <div class="report-title">Heineken 0.0 New Flavors & Lager Renaissance</div>
+                    <div class="report-description">
+                        Diese Woche: Heinekels zwei neue alkoholfreie Geschmacksvarianten (Cold Pressed Lime & Nectarine Juniper), Non-Alc-Markt wächst auf 26,2 Mrd. USD, West Coast IPA Renaissance, Lager-Comeback, NABLAB 2026 Konferenz, und nachhaltige Verpackungsinnovationen.
+                    </div>
+                    <a href="reports/2026-06-17/index.html" class="report-link">Report anschauen →</a>
+                </a>
+                
+                <a href="reports/2026-06-15/index.html" class="report-card">
+                    <div class="report-date">15. Juni 2026</div>
+                    <div class="report-title">Heineken 0.0, Funktionale Biere & Tropische Innovationen</div>
+                    <div class="report-description">
+                        Heineken 0.0 erweitert sein Portfolio, europäische Marken entdecken Funktionalität mit Proteinen & Vitaminen, tropische Geschmacksfusionen, nachhaltige Verpackung, VULKAN lanciert alkoholfreies Fassbier, und Craft Beer wächst auf 390 Mrd. USD bis 2035.
+                    </div>
+                    <a href="reports/2026-06-15/index.html" class="report-link">Report anschauen →</a>
+                </a>
+                
+                <a href="reports/2026-06-13/index.html" class="report-card">
+                    <div class="report-date">13. Juni 2026</div>
+                    <div class="report-title">Sour Ales & Premium Craft Trends</div>
+                    <div class="report-description">
+                        Markttrends in der Craft-Beer-Szene, neue Gärungsverfahren, regionale Hop-Sorten im Fokus, und die wachsende Nachfrage nach Premium-Positionierung im europäischen Markt.
+                    </div>
+                    <a href="reports/2026-06-13/index.html" class="report-link">Report anschauen →</a>
+                </a>
+                
+                <a href="reports/2026-06-11/index.html" class="report-card">
+                    <div class="report-date">11. Juni 2026</div>
+                    <div class="report-title">Alkoholfreier Boom & Verbraucherverhalten</div>
+                    <div class="report-description">
+                        Wachstum im alkoholfreien Segment, Konsumenten-Insights zur "Sober-Curious"-Bewegung, neue Marktchancen, und Positionen etablierter Brauereien.
+                    </div>
+                    <a href="reports/2026-06-11/index.html" class="report-link">Report anschauen →</a>
+                </a>
+                
+                <a href="reports/2026-06-09/index.html" class="report-card">
+                    <div class="report-date">9. Juni 2026</div>
+                    <div class="report-title">Global Flavor Innovation & Packaging Design</div>
+                    <div class="report-description">
+                        Internationale Geschmacksexperimente, kulturelle Fusion in Craft Beers, innovative Verpackungslösungen, und Collectible Appeal im Premium-Segment.
+                    </div>
+                    <a href="reports/2026-06-09/index.html" class="report-link">Report anschauen →</a>
+                </a>
+                
+                <a href="reports/2026-06-07/index.html" class="report-card">
+                    <div class="report-date">7. Juni 2026</div>
+                    <div class="report-title">Nachhaltigkeit & Zukunft der Brauwirtschaft</div>
+                    <div class="report-description">
+                        Nachhaltige Brau-Praktiken, Wassermanagement, erneuerbare Energien in Brauereien, und langfristige Marktzukunft.
+                    </div>
+                    <a href="reports/2026-06-07/index.html" class="report-link">Report anschauen →</a>
+                </a>
+                
+                <a href="reports/2026-06-05/index.html" class="report-card">
+                    <div class="report-date">5. Juni 2026</div>
+                    <div class="report-title">Gen Z & New Consumer Segments</div>
+                    <div class="report-description">
+                        Marketingstrategien für Gen Z, neue Konsumenten-Segmente, digitale Distribution, und Social Media Influence im Biermarkt.
+                    </div>
+                    <a href="reports/2026-06-05/index.html" class="report-link">Report anschauen →</a>
+                </a>
             </div>
         </div>
-
-        <footer>
-            <p>🍺 Bier-Innovationen • Täglich recherchiert & kompiliert</p>
-            <p style="margin-top: 15px;">🎩 Powered by <a href="https://base44.com" style="color: #d4af37;">Base44</a> & Alfred</p>
-        </footer>
+        
+        <div class="footer">
+            <p><strong>Bier-Innovationen Archive</strong> | Wöchentliche Marktanalyse</p>
+            <p style="font-size: 0.85em; margin-top: 15px; color: #999;">
+                Kuratiert und recherchiert von Alfred | Daten aus internationalen Marktforschungsquellen, Industriepublikationen und primären News-Feeds
+            </p>
+        </div>
     </div>
 </body>
 </html>
