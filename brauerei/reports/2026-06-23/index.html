@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brauerei Innovation Report – 23. Juni 2026</title>
+    <style>
+        :root { --primary: #d4a574; --secondary: #2c1810; --text: #333; --light: #f9f6f1; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: var(--text); background: linear-gradient(135deg, #f9f6f1 0%, #e8dcc8 100%); }
+        header { background: linear-gradient(135deg, var(--secondary) 0%, #4a3428 100%); color: white; padding: 4rem 2rem; text-align: center; }
+        header h1 { font-size: 2.4rem; margin-bottom: 0.6rem; font-weight: 300; }
+        header p { color: var(--primary); font-size: 1.1rem; }
+        .container { max-width: 920px; margin: 0 auto; padding: 2rem; }
+        .summary, .innovation, .conclusion { background: white; border-radius: 16px; padding: 2rem; margin: 1.5rem 0; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .summary { border-left: 4px solid var(--primary); }
+        .innovation h3 { color: var(--secondary); font-size: 1.2rem; margin-bottom: 0.8rem; display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+        .tag { display: inline-block; color: white; padding: 0.2rem 0.75rem; border-radius: 12px; font-size: 0.75rem; }
+        .market { background: #6b2c91; }
+        .product { background: #8b4513; }
+        .strategy { background: #444; }
+        .packaging { background: #2c5aa0; }
+        .ch { background: #228b22; }
+        .trend { background: #ff6b35; }
+        .celebrity { background: #c0392b; }
+        .tech { background: #16a085; }
+        .relevance { background: var(--light); border-left: 3px solid var(--primary); border-radius: 8px; padding: 1rem; margin-top: 1rem; }
+        .source { margin-top: 1rem; font-size: 0.92rem; }
+        .source a { color: var(--primary); text-decoration: none; }
+        .source a:hover { text-decoration: underline; }
+        .conclusion { background: linear-gradient(135deg, var(--secondary) 0%, #4a3428 100%); color: white; }
+        .conclusion h2 { margin-bottom: 0.9rem; }
+        .conclusion ul { margin-left: 1.25rem; }
+        .conclusion li { margin: 0.45rem 0; }
+        footer { text-align: center; color: #666; padding: 2rem; font-size: 0.9rem; }
+        .back { display: inline-block; margin-top: 1rem; color: var(--primary); text-decoration: none; }
+        .back:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🍺 Brauerei Innovation Report</h1>
+        <p>23. Juni 2026 · Fokus CH/EU + globale Player</p>
+    </header>
+
+    <div class="container">
+        <section class="summary">
+            <h2>📋 Kurzfazit</h2>
+            <p>{SUMMARY_TEXT}</p>
+        </section>
+
+        <section class="innovation">
+            <h3><span class="tag product">Produkt</span> Heineken 0.0 Neue Geschmacksrichtungen</h3>
+            <p>Heineken lanciert zwei neue alkoholfreie Geschmacksrichtungen: Cold Pressed Lime und Nectarine Juniper. Diese erweitern das Portfolio im schnell wachsenden Markt für alkoholfreie Biere und zeigen, dass auch Großbrauereien gezielt in Premium-Varianten investieren.</p>
+            <div class="relevance"><strong>Relevanz:</strong> Hoch – Trend zur Geschmacksdiversifizierung bei 0.0%</div>
+            <div class="source">🔗 Quelle: <a href="https://www.prnewswire.com/news-releases/heineken-0-0-adds-flavor-to-its-non-alcoholic-lineup-with-two-new-offerings-heineken-0-0-cold-pressed-lime-and-nectarine-juniper-302680408.html" target="_blank">PR Newswire</a></div>
+        </section>
+
+        <section class="innovation">
+            <h3><span class="tag ch">Schweiz</span> Sonnenbräu 24/7 gewinnt Swiss Beer Award Gold</h3>
+            <p>Das alkoholfreie Lagerbier 24/7 0.0% der St. Galler Brauerei Sonnenbräu wurde 2026 mit Gold am Swiss Beer Award ausgezeichnet – als bestes Bier seiner Kategorie. Mit +70% Wachstum zeigt sich auch in der Schweiz ein starker Markt für Premium-Alkoholfreies.</p>
+            <div class="relevance"><strong>Relevanz:</strong> Sehr Hoch – Lokaler Qualitätserfolg mit hohem Wachstum</div>
+            <div class="source">🔗 Quelle: <a href="https://swissbeeraward.ch/award/praemierte-biere-2026/" target="_blank">Swiss Beer Award 2026</a></div>
+        </section>
+
+        <section class="innovation">
+            <h3><span class="tag packaging">Verpackung</span> Corona Fit Pack – Kunststofffreies Verpackungsdesign</h3>
+            <p>Corona bringt Fit Packs auf den Markt: stapelbare Dosen, die per Schraubmechanismus ineinander gesteckt werden können. Dies eliminiert die Notwendigkeit von Kunststoff-Verbindungsringen und spart massiv Verpackungsmaterial und CO2 bei Transport und Lagerung.</p>
+            <div class="relevance"><strong>Relevanz:</strong> Hoch – Großflächig umgesetzter Nachhaltigkeitsinnovation</div>
+            <div class="source">🔗 Quelle: <a href="https://www.sparkinnovations.com/great-eco-friendly-beer-can-packaging-ideas/" target="_blank">Spark Innovations</a></div>
+        </section>
+
+        <section class="innovation">
+            <h3><span class="tag tech">Technologie</span> AI-gesteuerte Bierrezeptur und Fermentationskontrolle</h3>
+            <p>Großbrauereien wie Heineken und Beck's nutzen 2026 verstärkt KI für Rezepturentwicklung und Fermentationsoptimierung. Sensoren und AI-Analytics ermöglichen Echtzeitüberwachung, bessere Qualitätskonsistenz und schnellere Innovation bei Kosteneinsparungen.</p>
+            <div class="relevance"><strong>Relevanz:</strong> Mittel – Effizienzsteigerung, noch nicht im Mainstream</div>
+            <div class="source">🔗 Quelle: <a href="https://probrewer.com/expert-topic-march-2026-technology/" target="_blank">ProBrewer</a></div>
+        </section>
+
+        <section class="innovation">
+            <h3><span class="tag market">Markt</span> Non-Alcoholic Beer Markt wächst auf 26+ Mrd. USD</h3>
+            <p>Der globale Markt für alkoholfreies Bier wächst 2026 mit über 10% jährlich. Projektionen zeigen ein Wachstum von 26,2 Mrd. USD (2026) auf 38,7 Mrd. USD bis 2030. Health-Consciousness und Premium-Positioning sind die Haupttreiber.</p>
+            <div class="relevance"><strong>Relevanz:</strong> Sehr Hoch – Struktureller Markttrend für Brauereien weltweit</div>
+            <div class="source">🔗 Quelle: <a href="https://www.researchandmarkets.com/reports/5744216/non-alcoholic-beer-market-report" target="_blank">ResearchAndMarkets</a></div>
+        </section>
+
+        <section class="innovation">
+            <h3><span class="tag trend">Trend</span> West-Coast IPA Renaissance und Lager-Trend</h3>
+            <p>Craft-Brauereien feiern 2026 eine Renaissance von West-Coast IPAs und mexikanischen Lager-Stilen. Nach Jahren von Trends wie Hazy IPAs und Pastry Stouts kehren Brauereien zu klassischen, fokussierten Rezepturen zurück – Authentizität statt Gimmicks.</p>
+            <div class="relevance"><strong>Relevanz:</strong> Mittel – Kultureller Wechsel in der Craft-Szene</div>
+            <div class="source">🔗 Quelle: <a href="https://daily.sevenfifty.com/6-beer-industry-trends-to-watch-in-2026/" target="_blank">7FiftyDaily</a></div>
+        </section>
+
+        <section class="conclusion">
+            <h2>🎯 Strategische Takeaways</h2>
+            <ul>
+                <li>Non-Alc Biere sind kein Nischen-Trend mehr – große Player investieren massiv mit Premium-Varianten</li>
+                <li>Schweizer Brauereien (Sonnenbräu) konkurrieren erfolgreich im Premiumsegment und profitieren von lokalen Awards</li>
+                <li>Nachhaltigkeit in Verpackung ist nicht Optional: Fit Pack und papierbasierte Multipack-Lösungen ersetzen Kunststoff</li>
+                <li>KI und Sensorik transformieren Brau- und Fermentationsprozesse – Qualität & Effizienz nehmen zu</li>
+                <li>Craft-Authentizität gewinnt gegenüber Extravaganz: West-Coast IPA und mexikanische Lager sind im Kommen</li>
+                <li>Die 26+ Mrd. USD Non-Alc Markt wird zum Game-Changer für traditionelle Brauereien</li>
+            </ul>
+        </section>
+
+        <a href="../../index.html" class="back">← Zurück zur Übersicht</a>
+    </div>
+
+    <footer>
+        <p>Recherchiert & kuratiert von Alfred 🎩 · 23. Juni 2026</p>
+    </footer>
+</body>
+</html>
